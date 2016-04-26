@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="8bd83ca2-4493-4e5e-a653-6f0ae6ec38b4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://121.42.26.100:3000/ServiceForOPS.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServiceForOPS.xsd" MetadataType="Schema" ID="2909e891-8567-437e-b97b-5d77f7530f8f" SourceId="1" SourceUrl="http://121.42.26.100:3000/ServiceForOPS.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServiceForOPS.wsdl" MetadataType="Wsdl" ID="b3674f93-ae00-44f3-a356-9a92b5daf348" SourceId="1" SourceUrl="http://121.42.26.100:3000/ServiceForOPS.svc?wsdl" />
+    <MetadataFile FileName="ServiceForOPS1.xsd" MetadataType="Schema" ID="d1625cb2-c48c-4fe4-a3b7-eae739c63640" SourceId="1" SourceUrl="http://121.42.26.100:3000/ServiceForOPS.svc?xsd=xsd3" />
+    <MetadataFile FileName="ServiceForOPS2.xsd" MetadataType="Schema" ID="03721758-dae5-405c-b31e-b3fd4c7dc998" SourceId="1" SourceUrl="http://121.42.26.100:3000/ServiceForOPS.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServiceForOPS3.xsd" MetadataType="Schema" ID="29391828-d011-4f51-8a37-c575746c6684" SourceId="1" SourceUrl="http://121.42.26.100:3000/ServiceForOPS.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServiceForOPS4.xsd" MetadataType="Schema" ID="9ac2c9d4-f76d-4477-a067-41d4ed73f34c" SourceId="1" SourceUrl="http://121.42.26.100:3000/ServiceForOPS.svc?xsd=xsd4" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

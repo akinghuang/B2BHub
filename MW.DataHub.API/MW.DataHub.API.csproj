@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E7B4BFCC-5878-44C8-AF04-EFF7D2D632B4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MW.DataHub.API</RootNamespace>
+    <AssemblyName>MW.DataHub.API</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Components\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="diffiehellman, Version=0.0.0.0, Culture=neutral, PublicKeyToken=893fce744c3d0315, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DIMERCO.SDK2.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8500bd8be1ba8cfc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Components\DIMERCO.SDK2.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Components\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Components\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder, Version=1.0.51206.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Components\Microsoft.Practices.ObjectBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="Org.Mentalis.Security, Version=1.0.13.715, Culture=neutral" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Net.FtpClient, Version=1.0.4120.26532, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Components\System.Net.FtpClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Tamir.SharpSSH, Version=1.1.1.14, Culture=neutral, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BO\BOFactory.cs" />
+    <Compile Include="BO\clsBase.cs" />
+    <Compile Include="BO\Entity\EntityBPMailAttachFact\clsEntityBPMailAttach.cs" />
+    <Compile Include="BO\Entity\EntityBPMailAttachFact\clsEntityBPMailAttachExtra.cs" />
+    <Compile Include="BO\Entity\EntityBPMailAttachFact\EntityBPMailAttach.cs" />
+    <Compile Include="BO\Entity\EntityBPMailAttachFact\EntityBPMailAttachRepository.cs" />
+    <Compile Include="BO\Entity\EntityBPMailFailedFact\clsEntityBPMailFailed.cs" />
+    <Compile Include="BO\Entity\EntityBPMailFailedFact\clsEntityBPMailFailedExtra.cs" />
+    <Compile Include="BO\Entity\EntityBPMailFailedFact\EntityBPMailFailed.cs" />
+    <Compile Include="BO\Entity\EntityBPMailFailedFact\EntityBPMailFailedRepository.cs" />
+    <Compile Include="BO\Entity\EntityBPMailLogFact\clsEntityBPMailLog.cs" />
+    <Compile Include="BO\Entity\EntityBPMailLogFact\EntityBPMailLog.cs" />
+    <Compile Include="BO\Entity\EntityBPMailLogFact\EntityBPMailLogRepository.cs" />
+    <Compile Include="BO\Entity\EntityBPMailLogFact\clsEntityBPMailLogExtra.cs" />
+    <Compile Include="BO\Entity\EntityBPSettingFact\clsEntityBPSetting.cs" />
+    <Compile Include="BO\Entity\EntityBPSettingFact\EntityBPSetting.cs" />
+    <Compile Include="BO\Entity\EntityBPSettingFact\EntityBPSettingRepository.cs" />
+    <Compile Include="Data\Excel.cs" />
+    <Compile Include="Data\Txt.cs" />
+    <Compile Include="Data\XML.cs" />
+    <Compile Include="EDIInterface\IBizHandler.cs" />
+    <Compile Include="EDIInterface\IMsgHandler.cs" />
+    <Compile Include="Net\FTP.cs" />
+    <Compile Include="Net\HTTP.cs" />
+    <Compile Include="Net\Mail.cs" />
+    <Compile Include="Net\sFTP.cs" />
+    <Compile Include="Net\WinAPI\Extensions.cs" />
+    <Compile Include="Net\WinAPI\FtpConnection.cs" />
+    <Compile Include="Net\WinAPI\FtpDirectoryInfo.cs" />
+    <Compile Include="Net\WinAPI\FtpException.cs" />
+    <Compile Include="Net\WinAPI\FtpFileInfo.cs" />
+    <Compile Include="Net\WinAPI\WinApi.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FMS\AMS.cs" />
+    <Compile Include="FMS\Invoice.cs" />
+    <Compile Include="FMS\OMS.cs" />
+    <Compile Include="FMS\Other.cs" />
+    <Compile Include="FMS\ReSM.cs" />
+    <Compile Include="FMS\ValuePlusBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Common\" />
+    <Folder Include="MWERP\" />
+    <Folder Include="TMS\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

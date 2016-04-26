@@ -1,0 +1,9 @@
+﻿install:
+	cmd window ->
+		C:\Windows\Microsoft.Net\Framework64\v2.0.50727
+			installUtil E:\Value+\EDI\Dimerco B2B\VSS\MW.DataHub.Service\bin\Debug\MW.DataHub.Service.exe
+
+unstall:
+	cmd window ->
+		C:\Windows\Microsoft.Net\Framework\v2.0.50727
+			sc delete "Dimerco EDI Service"

@@ -1,0 +1,125 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.master.cs" Inherits="MW.DataHub.Portal.Default" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>MilkyWay DataHub System</title>
+    <script type="text/javascript" src="../Src/JS/jquery-ui-1.10.4.custom/js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="../Src/JS/jquery.form.js"></script>
+     <link  type="text/css" rel="Stylesheet" href="~/Src/css/Common.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+  
+    </asp:ContentPlaceHolder>
+    <script type="text/javascript">
+        $(document).ready(function(){
+//            var theForm = document.forms['aspnetForm'];
+//            if (!theForm) {
+//                theForm = document.aspnetForm;
+//            }
+//            $(theForm).submit(function(){showLoading();})
+            hideLoading();
+        })
+     
+        function trMouseOut(e)
+        {
+            if($(e).attr("class")!="tr02"){$(e).attr("class","")};
+        }
+
+        function trMouseMove(e)
+        {
+            if($(e).attr("class")!="tr02"&&$(e).attr("alt")!="delete"){$(e).attr("class","tr01")};
+        }
+
+        function ConfirmDelete()
+        {
+            if(confirm("confirm to delete?"))
+            {
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+        
+        jQuery.fn.rowspan = function(colIdx) {//用于合并相同内容单元格(列)  
+            return this.each(function(){  
+                var that;   
+                $('tr:gt(0)', this).each(function(row) {  
+                     
+                    $('td:eq('+colIdx+')', this).filter(':visible').each(function(col) {   
+                        if (that!=null && $(this).html() == $(that).html()) {   
+                            rowspan = $(that).attr("rowSpan");   
+                            if (rowspan == undefined) {   
+                                $(that).attr("rowSpan",1);   
+                                rowspan = $(that).attr("rowSpan");   
+                            }   
+                            rowspan = Number(rowspan)+1;   
+                            $(that).attr("rowSpan",rowspan);   
+                            $(this).hide();   
+                        } else {   
+                            that = this;   
+                        }   
+                    });   
+                });   
+            });   
+        }   
+        function changeDialogBackgroundColor()
+        {
+            $("#dialog").css("background-color","#FFFFCC");
+            $("#dialog").parent().css("background-color","#FFFFCC");
+        }
+        
+        function strJsonDeReplace(strJson,type)
+        {
+            if(type=="Html")
+            {
+                return strJson.replace(/-flag01-/g,"\r\n").replace(/-flag02-/g,"\n").replace(/-flag03-/g,"\t").replace(/-flag04-/g,"\r");
+            }
+            else{
+                return strJson.replace(/-flag01-/g,"\r\n").replace(/-flag02-/g,"\n").replace(/-flag03-/g,"\t").replace(/-flag04-/g,"\r");
+
+            }
+        }
+        
+        function showLoading()
+        {
+            $(".divLoading").show();
+            return true;
+        }
+        
+        function hideLoading()
+        {
+            $(".divLoading").hide();
+        }
+        
+        function cancleEvent(evt)
+        {
+            var e=(evt)?evt:window.event;  
+            if (window.event) {  
+                e.cancelBubble=true;  
+            } else {  
+                e.stopPropagation();  
+            }  
+        }
+        
+        function changeLinkColor($obj)
+        {
+            $("a").css("color","blue");
+        }
+        
+        function onlyInputInteger(e)
+        {
+            var regInt=/[^0-9]/g;
+            $(e).val($(e).val().replace(regInt,""));
+        }
+    </script>
+</head>
+<body >
+    <form id="form1" runat="server">
+    <div class="divLoading"><img src="../Image/Images/loading.gif" title="loading.." alt="loading.." /></div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>

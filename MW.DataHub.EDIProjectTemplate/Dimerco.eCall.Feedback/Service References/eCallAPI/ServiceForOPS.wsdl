@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServiceForOPS" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://121.42.26.100:3000/ServiceForOPS.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://121.42.26.100:3000/ServiceForOPS.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://121.42.26.100:3000/ServiceForOPS.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/eCallService" />
+      <xsd:import schemaLocation="http://121.42.26.100:3000/ServiceForOPS.svc?xsd=xsd3" />
+      <xsd:import schemaLocation="http://121.42.26.100:3000/ServiceForOPS.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServiceForOPS_GetData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetData" />
+  </wsdl:message>
+  <wsdl:message name="IServiceForOPS_GetData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceForOPS_GetLogisticsStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLogisticsStatus" />
+  </wsdl:message>
+  <wsdl:message name="IServiceForOPS_GetLogisticsStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLogisticsStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceForOPS_GET_FREIGHTTRANSPORT_InputMessage">
+    <wsdl:part name="parameters" element="tns:GET_FREIGHTTRANSPORT" />
+  </wsdl:message>
+  <wsdl:message name="IServiceForOPS_GET_FREIGHTTRANSPORT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GET_FREIGHTTRANSPORTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceForOPS_GET_FREIGHTTRANSPORTByGroupID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GET_FREIGHTTRANSPORTByGroupID" />
+  </wsdl:message>
+  <wsdl:message name="IServiceForOPS_GET_FREIGHTTRANSPORTByGroupID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GET_FREIGHTTRANSPORTByGroupIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceForOPS_POST_Ack_InputMessage">
+    <wsdl:part name="parameters" element="tns:POST_Ack" />
+  </wsdl:message>
+  <wsdl:message name="IServiceForOPS_POST_Ack_OutputMessage">
+    <wsdl:part name="parameters" element="tns:POST_AckResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceForOPS_Insert_OrderInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:Insert_OrderInfo" />
+  </wsdl:message>
+  <wsdl:message name="IServiceForOPS_Insert_OrderInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Insert_OrderInfoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServiceForOPS">
+    <wsdl:operation name="GetData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceForOPS/GetData" message="tns:IServiceForOPS_GetData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceForOPS/GetDataResponse" message="tns:IServiceForOPS_GetData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLogisticsStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceForOPS/GetLogisticsStatus" message="tns:IServiceForOPS_GetLogisticsStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceForOPS/GetLogisticsStatusResponse" message="tns:IServiceForOPS_GetLogisticsStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GET_FREIGHTTRANSPORT">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceForOPS/GET_FREIGHTTRANSPORT" message="tns:IServiceForOPS_GET_FREIGHTTRANSPORT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceForOPS/GET_FREIGHTTRANSPORTResponse" message="tns:IServiceForOPS_GET_FREIGHTTRANSPORT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GET_FREIGHTTRANSPORTByGroupID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceForOPS/GET_FREIGHTTRANSPORTByGroupID" message="tns:IServiceForOPS_GET_FREIGHTTRANSPORTByGroupID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceForOPS/GET_FREIGHTTRANSPORTByGroupIDResponse" message="tns:IServiceForOPS_GET_FREIGHTTRANSPORTByGroupID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="POST_Ack">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceForOPS/POST_Ack" message="tns:IServiceForOPS_POST_Ack_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceForOPS/POST_AckResponse" message="tns:IServiceForOPS_POST_Ack_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Insert_OrderInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceForOPS/Insert_OrderInfo" message="tns:IServiceForOPS_Insert_OrderInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceForOPS/Insert_OrderInfoResponse" message="tns:IServiceForOPS_Insert_OrderInfo_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServiceForOPS" type="tns:IServiceForOPS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetData">
+      <soap:operation soapAction="http://tempuri.org/IServiceForOPS/GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLogisticsStatus">
+      <soap:operation soapAction="http://tempuri.org/IServiceForOPS/GetLogisticsStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GET_FREIGHTTRANSPORT">
+      <soap:operation soapAction="http://tempuri.org/IServiceForOPS/GET_FREIGHTTRANSPORT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GET_FREIGHTTRANSPORTByGroupID">
+      <soap:operation soapAction="http://tempuri.org/IServiceForOPS/GET_FREIGHTTRANSPORTByGroupID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="POST_Ack">
+      <soap:operation soapAction="http://tempuri.org/IServiceForOPS/POST_Ack" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert_OrderInfo">
+      <soap:operation soapAction="http://tempuri.org/IServiceForOPS/Insert_OrderInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceForOPS">
+    <wsdl:port name="BasicHttpBinding_IServiceForOPS" binding="tns:BasicHttpBinding_IServiceForOPS">
+      <soap:address location="http://121.42.26.100:3000/ServiceForOPS.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

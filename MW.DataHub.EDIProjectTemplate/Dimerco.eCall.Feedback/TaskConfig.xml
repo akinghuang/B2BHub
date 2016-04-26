@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TaskSetting>
+  <ReSMdb ConnectionString=""></ReSMdb>
+  <eCallService URL="http://121.42.26.100:3000/ServiceForOPS.svc?wsdl"></eCallService>
+  <Trigger StatusCode="E099"></Trigger>
+</TaskSetting>

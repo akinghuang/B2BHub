@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3A25B278-9B81-4C8A-9BBF-9DA16A0E64A7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MW.DataHub.BO</RootNamespace>
+    <AssemblyName>MW.DataHub.BO</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DIMERCO.SDK2.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8500bd8be1ba8cfc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Components\DIMERCO.SDK2.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="DIMERCO.SDK2.RepositoryBuilder, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Components\DIMERCO.SDK2.RepositoryBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="Maticsoft.DBUtility, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Components\Maticsoft.DBUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Common, Version=1.4.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Components\Microsoft.Practices.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Components\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Components\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder, Version=1.0.51206.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Components\Microsoft.Practices.ObjectBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BOFactory.cs" />
+    <Compile Include="clsBase.cs" />
+    <Compile Include="Common\DBCommon.cs" />
+    <Compile Include="Common\LocalLog.cs" />
+    <Compile Include="DA\Entity\EntityBPActivitiesFact\clsEntityBPActivities.cs" />
+    <Compile Include="DA\Entity\EntityBPActivitiesFact\clsEntityBPActivitiesExtra.cs" />
+    <Compile Include="DA\Entity\EntityBPActivitiesFact\EntityBPActivities.cs" />
+    <Compile Include="DA\Entity\EntityBPActivitiesFact\EntityBPActivitiesRepository.cs" />
+    <Compile Include="DA\Entity\EntityBPActivitiyLogFact\clsEntityBPActivitiyLog.cs" />
+    <Compile Include="DA\Entity\EntityBPActivitiyLogFact\clsEntityBPActivitiyLogExtra.cs" />
+    <Compile Include="DA\Entity\EntityBPActivitiyLogFact\EntityBPActivitiyLog.cs" />
+    <Compile Include="DA\Entity\EntityBPActivitiyLogFact\EntityBPActivitiyLogRepository.cs" />
+    <Compile Include="DA\Entity\EntityBPMailAttachFact\clsEntityBPMailAttach.cs" />
+    <Compile Include="DA\Entity\EntityBPMailAttachFact\clsEntityBPMailAttachExtra.cs" />
+    <Compile Include="DA\Entity\EntityBPMailAttachFact\EntityBPMailAttach.cs" />
+    <Compile Include="DA\Entity\EntityBPMailAttachFact\EntityBPMailAttachRepository.cs" />
+    <Compile Include="DA\Entity\EntityBPMailLogFact\clsEntityBPMailLog.cs" />
+    <Compile Include="DA\Entity\EntityBPMailLogFact\clsEntityBPMailLogExtra.cs" />
+    <Compile Include="DA\Entity\EntityBPMailLogFact\EntityBPMailLog.cs" />
+    <Compile Include="DA\Entity\EntityBPMailLogFact\EntityBPMailLogRepository.cs" />
+    <Compile Include="DA\Entity\EntityBPProjectChangeFact\clsEntityBPProjectChange.cs" />
+    <Compile Include="DA\Entity\EntityBPProjectChangeFact\clsEntityBPProjectChangeExtra.cs" />
+    <Compile Include="DA\Entity\EntityBPProjectChangeFact\EntityBPProjectChange.cs" />
+    <Compile Include="DA\Entity\EntityBPProjectChangeFact\EntityBPProjectChangeRepository.cs" />
+    <Compile Include="DA\Entity\EntityBPProjectFact\clsEntityBPProject.cs" />
+    <Compile Include="DA\Entity\EntityBPProjectFact\clsEntityBPProjectExtra.cs" />
+    <Compile Include="DA\Entity\EntityBPProjectFact\EntityBPProject.cs" />
+    <Compile Include="DA\Entity\EntityBPProjectFact\EntityBPProjectRepository.cs" />
+    <Compile Include="DA\Entity\EntityBPProjectLogFact\clsEntityBPProjectLog.cs" />
+    <Compile Include="DA\Entity\EntityBPProjectLogFact\clsEntityBPProjectLogExtra.cs" />
+    <Compile Include="DA\Entity\EntityBPProjectLogFact\EntityBPProjectLog.cs" />
+    <Compile Include="DA\Entity\EntityBPProjectLogFact\EntityBPProjectLogRepository.cs" />
+    <Compile Include="DA\Entity\EntityBPProjectNtfFact\clsEntityBPProjectNtf.cs" />
+    <Compile Include="DA\Entity\EntityBPProjectNtfFact\clsEntityBPProjectNtfExtra.cs" />
+    <Compile Include="DA\Entity\EntityBPProjectNtfFact\EntityBPProjectNtf.cs" />
+    <Compile Include="DA\Entity\EntityBPProjectNtfFact\EntityBPProjectNtfRepository.cs" />
+    <Compile Include="DA\Entity\EntityBPProjectTaskFact\clsEntityBPProjectTask.cs" />
+    <Compile Include="DA\Entity\EntityBPProjectTaskFact\clsEntityBPProjectTaskExtra.cs" />
+    <Compile Include="DA\Entity\EntityBPProjectTaskFact\EntityBPProjectTask.cs" />
+    <Compile Include="DA\Entity\EntityBPProjectTaskFact\EntityBPProjectTaskRepository.cs" />
+    <Compile Include="DA\Entity\EntityBPUserFact\clsEntityBPUser.cs" />
+    <Compile Include="DA\Entity\EntityBPUserFact\clsEntityBPUserExtra.cs" />
+    <Compile Include="DA\Entity\EntityBPUserFact\EntityBPUser.cs" />
+    <Compile Include="DA\Entity\EntityBPUserFact\EntityBPUserRepository.cs" />
+    <Compile Include="DA\Entity\EntityBPUserProjectFact\clsEntityBPUserProject.cs" />
+    <Compile Include="DA\Entity\EntityBPUserProjectFact\clsEntityBPUserProjectExtra.cs" />
+    <Compile Include="DA\Entity\EntityBPUserProjectFact\EntityBPUserProject.cs" />
+    <Compile Include="DA\Entity\EntityBPUserProjectFact\EntityBPUserProjectRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\clsEDIService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Biz\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MW.DataHub.API\MW.DataHub.API.csproj">
+      <Project>{e7b4bfcc-5878-44c8-af04-eff7d2d632b4}</Project>
+      <Name>MW.DataHub.API</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

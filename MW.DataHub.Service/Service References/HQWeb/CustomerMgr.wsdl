@@ -1,0 +1,1499 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="CreateNewAgentPL">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="entity" type="tns:EntitySMAgentPL" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="EntitySMAgentPL">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="HQID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="VendorID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PLID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SpecializedMarket" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Network" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PICPersonal" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OthersInfo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Reason" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="hasCoload" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="hasBorrowIn" nillable="true" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreatedBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="UpdatedBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdatedDate" nillable="true" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreateNewAgentPLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateNewAgentPLResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreateAgentFormPlace">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="entity" type="tns:EntitySMAgentFormPlace" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="EntitySMAgentFormPlace">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="HQID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="VendorPLID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="FromPlaceType" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FromPlaceID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ToPlaceType" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ToPlaceID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Createby" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Createdate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Updateby" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Updatedate" nillable="true" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreateAgentFormPlaceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateAgentFormPlaceResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RemoveAgentFormPlace">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="entity" type="tns:EntitySMAgentFormPlace" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RemoveAgentFormPlaceResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpdateAgentControlPLStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="nPLLaneID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strStatus" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUpdateUser" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAgentControlPLStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateAgentControlPLStatusResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteAgentControlPL">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="nPLLaneID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteAgentControlPLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteAgentControlPLResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAgentPL">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="vHQID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAgentPLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAgentPLResult" type="tns:EntitySMAgentPL" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="vHQID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCustomerResult" type="tns:EntitySMCustomer" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="EntitySMCustomer">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="HQID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="StationID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CityID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IndustryID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="GlobalCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerName1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerAddress1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerAddress2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerAddress3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerAddress4" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerAddress5" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Phone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PhoneExt" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FaxExt" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Zip" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WebSite" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TradeTerm" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShipmentType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AirMove" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OceanMove" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AirLineCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TPLetterCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Marks1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Marks2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Marks3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Marks4" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Marks5" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NatureofGoods1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NatureofGoods2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Commodity" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VAT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreatedBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="UpdatedBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdatedDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Version" type="s:base64Binary" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsToACS" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ExistCustomer" nillable="true" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreatedStationID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VendorPostingGLCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LocalName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LeadSourceID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IndustryGroupID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PayTermID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="AgentID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="BillToParty" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PODFlag" nillable="true" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="FreightLocation" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsMNC" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsVendor" nillable="true" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerLevel" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SaveCustomer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="entity" type="tns:EntitySMCustomer" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveCustomerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaveCustomerResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateNewCustomer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="entity" type="tns:EntitySMCustomer" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateNewCustomerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateNewCustomerResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadCompany">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="entity" type="tns:EntitySMCustomer" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadCompanyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadCompanyResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadSLDepot">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="entity" type="tns:EntitySLDepot" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="EntitySLDepot">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CentralID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="StationID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DepotCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DepotName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CountryID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CityID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Desc" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Longitude" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Latitude" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedDT" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreatedBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdatedDT" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="UpdatedBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="HQID" nillable="true" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UploadSLDepotResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadSLDepotResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateNewCustomerPL">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="entityPL" type="tns:EntitySMCustomerPL" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="EntitySMCustomerPL">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="HQID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CustomerID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProductLineID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsStation" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsForeignAgent" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsLocalAgent" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsAirLine" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsOceanCarrier" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsCustomer" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsShipper" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsCNEE" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Is3rdParty" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsNotify" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsBroker" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="DASCarrierCountryID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreatedBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="UpdatedBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdatedDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Version" type="s:base64Binary" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsForward" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsTrucker" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsVendor" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsBillTo" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="SalesPersonID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CustomerServiceID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsWarehouse" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsBrrowin" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsCoLoad" nillable="true" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreateNewCustomerPLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateNewCustomerPLResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateCustomerContact">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="entity" type="tns:EntitySMCustomerContact" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="EntitySMCustomerContact">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="HQID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CustomerID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FullName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Tel_H" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Tel_M" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Tel_O" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Tel_OExt" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Birthday" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreatedBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="UpdatedBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdatedDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Version" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="Role" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Department" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Location" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Boss" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Assistant" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Language" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="JoinedCompany" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="JoinedIndustry" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Hobby" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Address" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ZIP" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PersonalInformation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="trContent" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FamilyMembers" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Names" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Titles" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LastContactDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastContact" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VIP" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LocalName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fax2" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreateCustomerContactResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateCustomerContactResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerContact">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="vHQID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerContactResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCustomerContactResult" type="tns:EntitySMCustomerContact" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RemoveCustomerContact">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="entity" type="tns:EntitySMCustomerContact" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RemoveCustomerContactResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="CreateeForm">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="entity" type="tns:EntitySMCustomerForms" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="EntitySMCustomerForms">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="HQID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CustomerID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="eFormName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VIA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FileFormat" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreatedBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="UpdatedBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdatedDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Version" type="s:base64Binary" />
+          <s:element minOccurs="1" maxOccurs="1" name="ZipFile" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreateeFormResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateeFormResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GeteForm">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="vHQID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GeteFormResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GeteFormResult" type="tns:EntitySMCustomerForms" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RemoveeForm">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="entity" type="tns:EntitySMCustomerForms" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RemoveeFormResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="CreateFormPlace">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="entity" type="tns:EntitySMCustomerFormPlace" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="EntitySMCustomerFormPlace">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="HQID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="FormID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="FromPlaceType" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FromPlaceID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ToPlaceType" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ToPlaceID" nillable="true" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreateFormPlaceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateFormPlaceResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFormPlace">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="vHQID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFormPlaceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFormPlaceResult" type="tns:EntitySMCustomerFormPlace" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RemoveFormPlace">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="entity" type="tns:EntitySMCustomerFormPlace" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RemoveFormPlaceResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="CreateFormMail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="entity" type="tns:EntitySMCustomerFormMail" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="EntitySMCustomerFormMail">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="HQID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CustomerFormID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreatedBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="UpdatedBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdatedDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="SID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreateFormMailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateFormMailResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFormMail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="vHQID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFormMailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFormMailResult" type="tns:EntitySMCustomerFormMail" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RemoveFormMail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="entity" type="tns:EntitySMCustomerFormMail" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RemoveFormMailResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetFormMailByPK">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="vFormID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUserID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFormMailByPKResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFormMailByPKResult" type="tns:EntitySMCustomerFormMail" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveRegisterNumber">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CustomerID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Value" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="User" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveRegisterNumberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SaveRegisterNumberResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RemoveRegisterNumber">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CustomerID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="User" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RemoveRegisterNumberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RemoveRegisterNumberResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateCustomerAddress">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="entity" type="tns:EntitySMCustomerAddress" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="EntitySMCustomerAddress">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="HQID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CustomerID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="FormType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerAddress1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerAddress2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerAddress3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerAddress4" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerAddress5" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerPhone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerFax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerEmail" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreatedBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatedDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="UpdatedBy" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdatedDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="ZIP" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CountryID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="StateID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CityID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CityName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AreaCode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreateCustomerAddressResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateCustomerAddressResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerAddress">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="vHQID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerAddressResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCustomerAddressResult" type="tns:EntitySMCustomerAddress" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CreateNewAgentPLSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateNewAgentPL" />
+  </wsdl:message>
+  <wsdl:message name="CreateNewAgentPLSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateNewAgentPLResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateAgentFormPlaceSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateAgentFormPlace" />
+  </wsdl:message>
+  <wsdl:message name="CreateAgentFormPlaceSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateAgentFormPlaceResponse" />
+  </wsdl:message>
+  <wsdl:message name="RemoveAgentFormPlaceSoapIn">
+    <wsdl:part name="parameters" element="tns:RemoveAgentFormPlace" />
+  </wsdl:message>
+  <wsdl:message name="RemoveAgentFormPlaceSoapOut">
+    <wsdl:part name="parameters" element="tns:RemoveAgentFormPlaceResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAgentControlPLStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateAgentControlPLStatus" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAgentControlPLStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateAgentControlPLStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteAgentControlPLSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteAgentControlPL" />
+  </wsdl:message>
+  <wsdl:message name="DeleteAgentControlPLSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteAgentControlPLResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAgentPLSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAgentPL" />
+  </wsdl:message>
+  <wsdl:message name="GetAgentPLSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAgentPLResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCustomer" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveCustomerSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveCustomer" />
+  </wsdl:message>
+  <wsdl:message name="SaveCustomerSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateNewCustomerSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateNewCustomer" />
+  </wsdl:message>
+  <wsdl:message name="CreateNewCustomerSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateNewCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadCompanySoapIn">
+    <wsdl:part name="parameters" element="tns:UploadCompany" />
+  </wsdl:message>
+  <wsdl:message name="UploadCompanySoapOut">
+    <wsdl:part name="parameters" element="tns:UploadCompanyResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadSLDepotSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadSLDepot" />
+  </wsdl:message>
+  <wsdl:message name="UploadSLDepotSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadSLDepotResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateNewCustomerPLSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateNewCustomerPL" />
+  </wsdl:message>
+  <wsdl:message name="CreateNewCustomerPLSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateNewCustomerPLResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateCustomerContactSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateCustomerContact" />
+  </wsdl:message>
+  <wsdl:message name="CreateCustomerContactSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateCustomerContactResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerContactSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCustomerContact" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerContactSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCustomerContactResponse" />
+  </wsdl:message>
+  <wsdl:message name="RemoveCustomerContactSoapIn">
+    <wsdl:part name="parameters" element="tns:RemoveCustomerContact" />
+  </wsdl:message>
+  <wsdl:message name="RemoveCustomerContactSoapOut">
+    <wsdl:part name="parameters" element="tns:RemoveCustomerContactResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateeFormSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateeForm" />
+  </wsdl:message>
+  <wsdl:message name="CreateeFormSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateeFormResponse" />
+  </wsdl:message>
+  <wsdl:message name="GeteFormSoapIn">
+    <wsdl:part name="parameters" element="tns:GeteForm" />
+  </wsdl:message>
+  <wsdl:message name="GeteFormSoapOut">
+    <wsdl:part name="parameters" element="tns:GeteFormResponse" />
+  </wsdl:message>
+  <wsdl:message name="RemoveeFormSoapIn">
+    <wsdl:part name="parameters" element="tns:RemoveeForm" />
+  </wsdl:message>
+  <wsdl:message name="RemoveeFormSoapOut">
+    <wsdl:part name="parameters" element="tns:RemoveeFormResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateFormPlaceSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateFormPlace" />
+  </wsdl:message>
+  <wsdl:message name="CreateFormPlaceSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateFormPlaceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFormPlaceSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFormPlace" />
+  </wsdl:message>
+  <wsdl:message name="GetFormPlaceSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFormPlaceResponse" />
+  </wsdl:message>
+  <wsdl:message name="RemoveFormPlaceSoapIn">
+    <wsdl:part name="parameters" element="tns:RemoveFormPlace" />
+  </wsdl:message>
+  <wsdl:message name="RemoveFormPlaceSoapOut">
+    <wsdl:part name="parameters" element="tns:RemoveFormPlaceResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateFormMailSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateFormMail" />
+  </wsdl:message>
+  <wsdl:message name="CreateFormMailSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateFormMailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFormMailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFormMail" />
+  </wsdl:message>
+  <wsdl:message name="GetFormMailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFormMailResponse" />
+  </wsdl:message>
+  <wsdl:message name="RemoveFormMailSoapIn">
+    <wsdl:part name="parameters" element="tns:RemoveFormMail" />
+  </wsdl:message>
+  <wsdl:message name="RemoveFormMailSoapOut">
+    <wsdl:part name="parameters" element="tns:RemoveFormMailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFormMailByPKSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFormMailByPK" />
+  </wsdl:message>
+  <wsdl:message name="GetFormMailByPKSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFormMailByPKResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveRegisterNumberSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveRegisterNumber" />
+  </wsdl:message>
+  <wsdl:message name="SaveRegisterNumberSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveRegisterNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="RemoveRegisterNumberSoapIn">
+    <wsdl:part name="parameters" element="tns:RemoveRegisterNumber" />
+  </wsdl:message>
+  <wsdl:message name="RemoveRegisterNumberSoapOut">
+    <wsdl:part name="parameters" element="tns:RemoveRegisterNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateCustomerAddressSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateCustomerAddress" />
+  </wsdl:message>
+  <wsdl:message name="CreateCustomerAddressSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateCustomerAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerAddressSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCustomerAddress" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerAddressSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCustomerAddressResponse" />
+  </wsdl:message>
+  <wsdl:portType name="CustomerMGRSoap">
+    <wsdl:operation name="CreateNewAgentPL">
+      <wsdl:input message="tns:CreateNewAgentPLSoapIn" />
+      <wsdl:output message="tns:CreateNewAgentPLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateAgentFormPlace">
+      <wsdl:input message="tns:CreateAgentFormPlaceSoapIn" />
+      <wsdl:output message="tns:CreateAgentFormPlaceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveAgentFormPlace">
+      <wsdl:input message="tns:RemoveAgentFormPlaceSoapIn" />
+      <wsdl:output message="tns:RemoveAgentFormPlaceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAgentControlPLStatus">
+      <wsdl:input message="tns:UpdateAgentControlPLStatusSoapIn" />
+      <wsdl:output message="tns:UpdateAgentControlPLStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAgentControlPL">
+      <wsdl:input message="tns:DeleteAgentControlPLSoapIn" />
+      <wsdl:output message="tns:DeleteAgentControlPLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAgentPL">
+      <wsdl:input message="tns:GetAgentPLSoapIn" />
+      <wsdl:output message="tns:GetAgentPLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomer">
+      <wsdl:input message="tns:GetCustomerSoapIn" />
+      <wsdl:output message="tns:GetCustomerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveCustomer">
+      <wsdl:input message="tns:SaveCustomerSoapIn" />
+      <wsdl:output message="tns:SaveCustomerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateNewCustomer">
+      <wsdl:input message="tns:CreateNewCustomerSoapIn" />
+      <wsdl:output message="tns:CreateNewCustomerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadCompany">
+      <wsdl:input message="tns:UploadCompanySoapIn" />
+      <wsdl:output message="tns:UploadCompanySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadSLDepot">
+      <wsdl:input message="tns:UploadSLDepotSoapIn" />
+      <wsdl:output message="tns:UploadSLDepotSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateNewCustomerPL">
+      <wsdl:input message="tns:CreateNewCustomerPLSoapIn" />
+      <wsdl:output message="tns:CreateNewCustomerPLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateCustomerContact">
+      <wsdl:input message="tns:CreateCustomerContactSoapIn" />
+      <wsdl:output message="tns:CreateCustomerContactSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerContact">
+      <wsdl:input message="tns:GetCustomerContactSoapIn" />
+      <wsdl:output message="tns:GetCustomerContactSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveCustomerContact">
+      <wsdl:input message="tns:RemoveCustomerContactSoapIn" />
+      <wsdl:output message="tns:RemoveCustomerContactSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateeForm">
+      <wsdl:input message="tns:CreateeFormSoapIn" />
+      <wsdl:output message="tns:CreateeFormSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GeteForm">
+      <wsdl:input message="tns:GeteFormSoapIn" />
+      <wsdl:output message="tns:GeteFormSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveeForm">
+      <wsdl:input message="tns:RemoveeFormSoapIn" />
+      <wsdl:output message="tns:RemoveeFormSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateFormPlace">
+      <wsdl:input message="tns:CreateFormPlaceSoapIn" />
+      <wsdl:output message="tns:CreateFormPlaceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFormPlace">
+      <wsdl:input message="tns:GetFormPlaceSoapIn" />
+      <wsdl:output message="tns:GetFormPlaceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveFormPlace">
+      <wsdl:input message="tns:RemoveFormPlaceSoapIn" />
+      <wsdl:output message="tns:RemoveFormPlaceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateFormMail">
+      <wsdl:input message="tns:CreateFormMailSoapIn" />
+      <wsdl:output message="tns:CreateFormMailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFormMail">
+      <wsdl:input message="tns:GetFormMailSoapIn" />
+      <wsdl:output message="tns:GetFormMailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveFormMail">
+      <wsdl:input message="tns:RemoveFormMailSoapIn" />
+      <wsdl:output message="tns:RemoveFormMailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFormMailByPK">
+      <wsdl:input message="tns:GetFormMailByPKSoapIn" />
+      <wsdl:output message="tns:GetFormMailByPKSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveRegisterNumber">
+      <wsdl:input message="tns:SaveRegisterNumberSoapIn" />
+      <wsdl:output message="tns:SaveRegisterNumberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveRegisterNumber">
+      <wsdl:input message="tns:RemoveRegisterNumberSoapIn" />
+      <wsdl:output message="tns:RemoveRegisterNumberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateCustomerAddress">
+      <wsdl:input message="tns:CreateCustomerAddressSoapIn" />
+      <wsdl:output message="tns:CreateCustomerAddressSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerAddress">
+      <wsdl:input message="tns:GetCustomerAddressSoapIn" />
+      <wsdl:output message="tns:GetCustomerAddressSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CustomerMGRSoap" type="tns:CustomerMGRSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateNewAgentPL">
+      <soap:operation soapAction="http://tempuri.org/CreateNewAgentPL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateAgentFormPlace">
+      <soap:operation soapAction="http://tempuri.org/CreateAgentFormPlace" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveAgentFormPlace">
+      <soap:operation soapAction="http://tempuri.org/RemoveAgentFormPlace" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAgentControlPLStatus">
+      <soap:operation soapAction="http://tempuri.org/UpdateAgentControlPLStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAgentControlPL">
+      <soap:operation soapAction="http://tempuri.org/DeleteAgentControlPL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAgentPL">
+      <soap:operation soapAction="http://tempuri.org/GetAgentPL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomer">
+      <soap:operation soapAction="http://tempuri.org/GetCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveCustomer">
+      <soap:operation soapAction="http://tempuri.org/SaveCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateNewCustomer">
+      <soap:operation soapAction="http://tempuri.org/CreateNewCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadCompany">
+      <soap:operation soapAction="http://tempuri.org/UploadCompany" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadSLDepot">
+      <soap:operation soapAction="http://tempuri.org/UploadSLDepot" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateNewCustomerPL">
+      <soap:operation soapAction="http://tempuri.org/CreateNewCustomerPL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateCustomerContact">
+      <soap:operation soapAction="http://tempuri.org/CreateCustomerContact" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerContact">
+      <soap:operation soapAction="http://tempuri.org/GetCustomerContact" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveCustomerContact">
+      <soap:operation soapAction="http://tempuri.org/RemoveCustomerContact" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateeForm">
+      <soap:operation soapAction="http://tempuri.org/CreateeForm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GeteForm">
+      <soap:operation soapAction="http://tempuri.org/GeteForm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveeForm">
+      <soap:operation soapAction="http://tempuri.org/RemoveeForm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateFormPlace">
+      <soap:operation soapAction="http://tempuri.org/CreateFormPlace" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFormPlace">
+      <soap:operation soapAction="http://tempuri.org/GetFormPlace" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveFormPlace">
+      <soap:operation soapAction="http://tempuri.org/RemoveFormPlace" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateFormMail">
+      <soap:operation soapAction="http://tempuri.org/CreateFormMail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFormMail">
+      <soap:operation soapAction="http://tempuri.org/GetFormMail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveFormMail">
+      <soap:operation soapAction="http://tempuri.org/RemoveFormMail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFormMailByPK">
+      <soap:operation soapAction="http://tempuri.org/GetFormMailByPK" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveRegisterNumber">
+      <soap:operation soapAction="http://tempuri.org/SaveRegisterNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveRegisterNumber">
+      <soap:operation soapAction="http://tempuri.org/RemoveRegisterNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateCustomerAddress">
+      <soap:operation soapAction="http://tempuri.org/CreateCustomerAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerAddress">
+      <soap:operation soapAction="http://tempuri.org/GetCustomerAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CustomerMGRSoap12" type="tns:CustomerMGRSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateNewAgentPL">
+      <soap12:operation soapAction="http://tempuri.org/CreateNewAgentPL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateAgentFormPlace">
+      <soap12:operation soapAction="http://tempuri.org/CreateAgentFormPlace" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveAgentFormPlace">
+      <soap12:operation soapAction="http://tempuri.org/RemoveAgentFormPlace" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAgentControlPLStatus">
+      <soap12:operation soapAction="http://tempuri.org/UpdateAgentControlPLStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAgentControlPL">
+      <soap12:operation soapAction="http://tempuri.org/DeleteAgentControlPL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAgentPL">
+      <soap12:operation soapAction="http://tempuri.org/GetAgentPL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomer">
+      <soap12:operation soapAction="http://tempuri.org/GetCustomer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveCustomer">
+      <soap12:operation soapAction="http://tempuri.org/SaveCustomer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateNewCustomer">
+      <soap12:operation soapAction="http://tempuri.org/CreateNewCustomer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadCompany">
+      <soap12:operation soapAction="http://tempuri.org/UploadCompany" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadSLDepot">
+      <soap12:operation soapAction="http://tempuri.org/UploadSLDepot" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateNewCustomerPL">
+      <soap12:operation soapAction="http://tempuri.org/CreateNewCustomerPL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateCustomerContact">
+      <soap12:operation soapAction="http://tempuri.org/CreateCustomerContact" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerContact">
+      <soap12:operation soapAction="http://tempuri.org/GetCustomerContact" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveCustomerContact">
+      <soap12:operation soapAction="http://tempuri.org/RemoveCustomerContact" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateeForm">
+      <soap12:operation soapAction="http://tempuri.org/CreateeForm" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GeteForm">
+      <soap12:operation soapAction="http://tempuri.org/GeteForm" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveeForm">
+      <soap12:operation soapAction="http://tempuri.org/RemoveeForm" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateFormPlace">
+      <soap12:operation soapAction="http://tempuri.org/CreateFormPlace" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFormPlace">
+      <soap12:operation soapAction="http://tempuri.org/GetFormPlace" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveFormPlace">
+      <soap12:operation soapAction="http://tempuri.org/RemoveFormPlace" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateFormMail">
+      <soap12:operation soapAction="http://tempuri.org/CreateFormMail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFormMail">
+      <soap12:operation soapAction="http://tempuri.org/GetFormMail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveFormMail">
+      <soap12:operation soapAction="http://tempuri.org/RemoveFormMail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFormMailByPK">
+      <soap12:operation soapAction="http://tempuri.org/GetFormMailByPK" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveRegisterNumber">
+      <soap12:operation soapAction="http://tempuri.org/SaveRegisterNumber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveRegisterNumber">
+      <soap12:operation soapAction="http://tempuri.org/RemoveRegisterNumber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateCustomerAddress">
+      <soap12:operation soapAction="http://tempuri.org/CreateCustomerAddress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerAddress">
+      <soap12:operation soapAction="http://tempuri.org/GetCustomerAddress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CustomerMGR">
+    <wsdl:port name="CustomerMGRSoap" binding="tns:CustomerMGRSoap">
+      <soap:address location="http://10.161.254.9/_layouts/DIMERCO.eSM/CustomerMgr.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CustomerMGRSoap12" binding="tns:CustomerMGRSoap12">
+      <soap12:address location="http://10.161.254.9/_layouts/DIMERCO.eSM/CustomerMgr.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

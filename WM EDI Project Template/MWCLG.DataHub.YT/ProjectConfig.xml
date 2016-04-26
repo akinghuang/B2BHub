@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ProjectSetting>
+  <!--数据库链接字符串-->
+  <ConnectionStrings>
+    <add name="BizDB" ConnectionString=""></add>
+  </ConnectionStrings>
+  <!--业务参数节-->
+  <BizParamaters>
+    <EnterpriseCode></EnterpriseCode>
+    <SenderID></SenderID>
+    <ReceiverID></ReceiverID>
+  
+  </BizParamaters>
+  <!--系统运行参数配置节-->
+  <RunTimeParamaters>
+    
+  </RunTimeParamaters>
+</ProjectSetting>

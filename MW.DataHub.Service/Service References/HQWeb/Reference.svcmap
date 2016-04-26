@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="248abbc8-93a6-42f1-bcbd-1bda2825cd91" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.161.254.9/_layouts/DIMERCO.eSM/CustomerMgr.asmx" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CustomerMgr.wsdl" MetadataType="Wsdl" ID="0a46e402-7160-402f-9c15-3eb965cb9f3f" SourceId="1" SourceUrl="http://10.161.254.9/_layouts/DIMERCO.eSM/CustomerMgr.asmx?wsdl" />
+    <MetadataFile FileName="CustomerMgr.disco" MetadataType="Disco" ID="81f70c0f-17c3-4e7f-a536-076f28e397e0" SourceId="1" SourceUrl="http://10.161.254.9/_layouts/DIMERCO.eSM/CustomerMgr.asmx?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
